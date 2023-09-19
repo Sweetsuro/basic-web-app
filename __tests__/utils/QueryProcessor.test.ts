@@ -38,7 +38,7 @@ describe("QueryProcessor", () => {
         const query = "What is 12 plus 22?";
         const response: string = QueryProcessor(query);
         expect(response).toBe((
-            "3q4"
+            "34"
           ));
     });
 
@@ -47,6 +47,14 @@ describe("QueryProcessor", () => {
         const response: string = QueryProcessor(query);
         expect(response).toBe((
             "84"
+          ));
+    });
+
+    test('should return square+cube vals', () => {
+        const query = "Which of the following numbers is both a square and a cube: 4291, 2262, 1260, 4096, 1315, 196, 2744?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "4096"
           ));
     });
 });
