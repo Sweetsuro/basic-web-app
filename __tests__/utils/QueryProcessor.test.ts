@@ -25,4 +25,12 @@ describe("QueryProcessor", () => {
             "Yo my andrew id exits."
           ));
     });
+
+    test('should return name', () => {
+        const query = "What is your name?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "Sweetsuro"
+          ));
+    });
 });
