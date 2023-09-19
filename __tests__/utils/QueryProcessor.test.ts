@@ -33,4 +33,20 @@ describe("QueryProcessor", () => {
             "Sweetsuro"
           ));
     });
+
+    test('should return add', () => {
+        const query = "What is 12 plus 22?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "3q4"
+          ));
+    });
+
+    test('should return largest', () => {
+        const query = "Which of the following numbers is the largest: 38, 84, 73?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "84"
+          ));
+    });
 });
